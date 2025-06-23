@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Results - HematoVision</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .progress-bar {
+            transition: width 0.6s ease-in-out;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-blue-600 p-2 rounded-lg">
+                        <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">HematoVision</h1>
+                        <p class="text-sm text-gray-600">Advanced Blood Cell Classification</p>
+                    </div>
+                </div>
+                <a href="/" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                    New Analysis
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Uploaded Image -->
+            <div class="bg-white rounded-lg shadow-sm border p-6 fade-in">
+                <h2 class="text-xl font-semibold mb-4">Uploaded Image</h2>
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <img src="{{ image_path }}" alt="Uploaded blood cell image" class="w-full h-80 object-contain rounded-lg border">
+                </div>
+            </div>
+
+            <!-- Classification Results -->
+            <div class="bg-white rounded-lg shadow-sm border p-6 fade-in">
+                <h2 class="text-xl font-semibold mb-4 flex items-center">
+                    <svg class="h-5 w-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Classification Results
+                </h2>
+                <p class="text-gray-600 mb-6">AI-powered analysis using transfer learning model</p>
+                
+                <!-- Main Result -->
+                <div class="bg-{{ confidence_color }}-100 p-4 rounded-lg mb-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="text-2xl font-bold text-gray-900">{{ prediction }}</h3>
+                        <span class="text-xl font-semibold text-{{ confidence_color }}-600">
+                            {{ confidence }}%
+                        </span>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-3">{{ description }}</p>
+                    
+                    <!-- Confidence Bar -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-600">Confidence Level</span>
+                            <span class="text-{{ confidence_color }}-600">{{ confidence_level }}</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-{{ confidence_color }}-600 h-2 rounded-full progress-bar" style="width: {{ confidence }}%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Details -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-blue-50 p-3 rounded-lg">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <svg class="h-4 w-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                            <span class="text-sm font-semibold text-blue-800">Model</span>
+                        </div>
+                        <p class="text-xs text-blue-600">Transfer Learning CNN</p>
+                    </div>
+                    
+                    <div class="bg-purple-50 p-3 rounded-lg">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <svg class="h-4 w-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                            <span class="text-sm font-semibold text-purple-800">Accuracy</span>
+                        </div>
+                        <p class="text-xs text-purple-600">Trained on 12,000+ images</p>
+                    </div>
+                </div>
+
+                <!-- Clinical Significance -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-gray-900 mb-2">Clinical Significance</h4>
+                    <p class="text-sm text-gray-700">
+                        This classification can assist healthcare professionals in identifying blood cell types 
+                        for diagnostic purposes. Always consult with a qualified pathologist for medical decisions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
