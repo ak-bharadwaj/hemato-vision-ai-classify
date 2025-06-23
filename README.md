@@ -17,7 +17,7 @@ HematoVision is a deep learning–based web application designed to classify mic
 ## 📸 Demo Screenshot
 
 ![App Screenshot]
-Screenshot_2025-06-23-18-08-22-21_40deb401b9ffe8e1df21cc5ba480b12.jpg
+(Screenshot_2025-06-23-18-08-22-21_40deb401b9ffe8e1df2f1cc5ba480b12.jpg)
 
 ---
 
