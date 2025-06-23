@@ -1,42 +1,59 @@
-# 🧬 HematoVision - Blood Cell Classification using Deep Learning
+# HematoVision 🧬  
+**Advanced Blood Cell Classification Using Transfer Learning**
 
-HematoVision is a web-based AI application that classifies blood cells into four categories using a Convolutional Neural Network (CNN) model. It helps in medical research and diagnosis by identifying white blood cell types from microscope images.
-
----
-
-## 📌 Project Overview
-
-This project was developed as part of the **SmartBridge Internship** to apply **Transfer Learning** for medical image classification.
-
-### 🔍 It can classify:
-- 🟥 **Eosinophils**
-- 🟦 **Lymphocytes**
-- 🟨 **Monocytes**
-- 🟩 **Neutrophils**
+HematoVision is a deep learning–based web application designed to classify microscopic images of blood cells using state-of-the-art transfer learning models. This tool assists healthcare professionals and researchers in the early diagnosis and analysis of hematological conditions.
 
 ---
 
-## 🚀 Features
+## 🔍 Features
 
-- 📷 Upload any microscope image of a blood smear
-- 🤖 Predicts the blood cell type using a trained `.h5` model
-- 📊 Shows prediction confidence with color-coded indicators
-- 🧠 Gives medical descriptions for each cell type
-
----
-
-## 🧠 Model Info
-
-- Framework: **TensorFlow / Keras**
-- Input Image Size: **150x150**
-- Preprocessing: Normalization, resizing, and augmentation
-- Model File: `bloodcell.h5` (pretrained and saved)
+- ✅ Upload blood cell images
+- ✅ Automatic AI-based classification (WBC, RBC, Platelets, etc.)
+- ✅ Built with Transfer Learning (MobileNetV2)
+- ✅ Lightweight, fast, and mobile-friendly interface
 
 ---
 
-## 🔧 How to Run (Locally)
+## 📸 Demo Screenshot
 
-1. Clone the repository:
-```bash
-git clone https://github.com/ak-bharadwaj/hemato-vision-ai-classify.git
-cd hemato-vision-ai-classify
+![App Screenshot](Screenshot_2025-06-23-18-08-22-21_40deb401b9ffe8e1df21cc5ba480b12.jpg)
+
+---
+
+## 🚀 How It Works
+
+1. Upload a microscopic image of a blood cell.
+2. The image is processed by a pre-trained model (MobileNetV2).
+3. The output shows the predicted blood cell type with confidence level.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Flask (Python)
+- **Model:** TensorFlow + MobileNetV2
+- **Deployment:** [Lovable.dev](https://lovable.dev/projects/7) *(live preview)*
+
+---
+
+## 📂 Project Structure
+hemato-vision-ai-classify/ ├── static/               # CSS, JS, image files ├── templates/            # HTML templates ├── model/                # Trained DL model ├── app.py                # Flask backend └── README.md
+
+---
+
+## 📈 Future Improvements
+
+- Add multi-class confidence chart  
+- Improve UI with real-time feedback  
+- Extend dataset for more blood cell types
+
+---
+
+## 🤝 Contributors
+
+- 🔬 Model & Training: [ak-bharadwaj](https://github.com/ak-bharadwaj)
+- 🧪 Data Source: Kaggle - Blood Cell Images Dataset
+
+---
+
