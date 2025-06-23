@@ -34,7 +34,6 @@ HematoVision is a deep learning–based web application designed to classify mic
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Flask (Python)
 - **Model:** TensorFlow + MobileNetV2
-- **Deployment:** [Lovable.dev](https://lovable.dev/projects/7) *(live preview)*
 
 ---
 
