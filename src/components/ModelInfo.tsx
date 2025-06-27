@@ -35,7 +35,7 @@ export const ModelInfo = () => {
         <div className="flex items-center space-x-3">
           <Clock className="h-8 w-8 text-orange-600" />
           <div>
-            <p className="font-semibold text-gray-900">< 2s</p>
+            <p className="font-semibold text-gray-900">&lt; 2s</p>
             <p className="text-sm text-gray-600">Inference Time</p>
           </div>
         </div>
