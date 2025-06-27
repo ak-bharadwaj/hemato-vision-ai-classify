@@ -1,59 +1,73 @@
-# HematoVision 🧬  
-**Advanced Blood Cell Classification Using Transfer Learning**
+# Welcome to your Lovable project
 
-HematoVision is a deep learning–based web application designed to classify microscopic images of blood cells using state-of-the-art transfer learning models. This tool assists healthcare professionals and researchers in the early diagnosis and analysis of hematological conditions.
+## Project info
 
----
+**URL**: https://lovable.dev/projects/c346f3dc-e251-468f-996f-915d1daa26a5
 
-## 🔍 Features
+## How can I edit this code?
 
-- ✅ Upload blood cell images
-- ✅ Automatic AI-based classification (WBC, RBC, Platelets, etc.)
-- ✅ Built with Transfer Learning (MobileNetV2)
-- ✅ Lightweight, fast, and mobile-friendly interface
+There are several ways of editing your application.
 
----
+**Use Lovable**
 
-## 📸 Demo Screenshot
+Simply visit the [Lovable Project](https://lovable.dev/projects/c346f3dc-e251-468f-996f-915d1daa26a5) and start prompting.
 
-## 📱 App Screenshot
+Changes made via Lovable will be committed automatically to this repo.
 
-<img src="https://github.com/ak-bharadwaj/hemato-vision-ai-classify/blob/main/Screenshot_2025-06-23-18-08-22-21_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" width="400"/>
----
+**Use your preferred IDE**
 
-## 🚀 How It Works
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-1. Upload a microscopic image of a blood cell.
-2. The image is processed by a pre-trained model (MobileNetV2).
-3. The output shows the predicted blood cell type with confidence level.
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
----
+Follow these steps:
 
-## 🛠️ Tech Stack
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Flask (Python)
-- **Model:** TensorFlow + MobileNetV2
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
----
+# Step 3: Install the necessary dependencies.
+npm i
 
-## 📂 Project Structure
-hemato-vision-ai-classify/ ├── static/               # CSS, JS, image files ├── templates/            # HTML templates ├── model/                # Trained DL model ├── app.py                # Flask backend └── README.md
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
 
----
+**Edit a file directly in GitHub**
 
-## 📈 Future Improvements
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-- Add multi-class confidence chart  
-- Improve UI with real-time feedback  
-- Extend dataset for more blood cell types
+**Use GitHub Codespaces**
 
----
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## 🤝 Contributors
+## What technologies are used for this project?
 
-- 🔬 Model & Training: [ak-bharadwaj](https://github.com/ak-bharadwaj)
-- 🧪 Data Source: Kaggle - Blood Cell Images Dataset
+This project is built with:
 
----
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/c346f3dc-e251-468f-996f-915d1daa26a5) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
