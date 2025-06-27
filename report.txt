@@ -1,0 +1,73 @@
+Project Report: HematoVision
+1. INTRODUCTION
+1.1 Project Overview
+HematoVision is an AI-powered system designed to classify different types of blood cells using deep learning. Leveraging transfer learning techniques with pre-trained models, this project aims to assist medical professionals in accurately identifying blood cell abnormalities in hematology.
+1.2 Purpose
+The goal is to build a robust, automated tool that streamlines the diagnostic process, reduces manual error, and accelerates hematological analysis using computer vision and machine learning.
+2. IDEATION PHASE
+2.1 Problem Statement
+Manual classification of blood cells is time-consuming and prone to human error. There is a need for an automated, intelligent system to assist in faster and more accurate diagnosis.
+2.2 Empathy Map Canvas
+- Users: Lab technicians, pathologists, healthcare professionals
+- Needs: Speed, accuracy, consistency
+- Pains: Manual analysis, eye strain, misclassification
+- Gains: Efficiency, reliability, diagnostic support
+2.3 Brainstorming
+Various deep learning models and techniques were considered, including CNNs, image augmentation, and transfer learning using MobileNet, ResNet, and EfficientNet.
+3. REQUIREMENT ANALYSIS
+3.1 Customer Journey Map
+Data collection → Model training → Prediction → Diagnosis support → Result usage in hospitals/labs
+3.2 Solution Requirements
+- High-quality blood cell images
+- Pre-trained model for transfer learning
+- Python environment (Google Colab)
+- TensorFlow/Keras, OpenCV
+3.3 Data Flow Diagram
+Image Input → Preprocessing → Feature Extraction → Classification Model → Output Label
+3.4 Technology Stack
+- Language: Python
+- Framework: TensorFlow/Keras
+- Tools: Google Colab, GitHub
+- Libraries: OpenCV, NumPy, Pandas, Matplotlib
+4. PROJECT DESIGN
+4.1 Problem-Solution Fit
+Blood cell classification is tedious; automation via AI fits the need for accuracy and efficiency.
+4.2 Proposed Solution
+A CNN-based transfer learning model trained on annotated blood cell images to detect and classify cells accurately.
+4.3 Solution Architecture
+- Input Layer (Image)
+- Preprocessing Layer
+- Transfer Learning Base (MobileNetV2)
+- Dense Layers
+- Output Layer (Softmax)
+5. PROJECT PLANNING & SCHEDULING
+5.1 Project Planning
+Week 1: Literature review and dataset gathering
+Week 2: Data preprocessing and exploratory analysis
+Week 3: Model training using transfer learning
+Week 4: Testing, evaluation, and report generation
+6. FUNCTIONAL AND PERFORMANCE TESTING
+6.1 Performance Testing
+- Accuracy: Achieved ~95% on validation data
+- Confusion Matrix: Showed reliable classification of RBCs, WBCs, and platelets
+- Time taken per prediction: <1 second on GPU
+7. RESULTS
+7.1 Output Screenshots
+
+8. ADVANTAGES & DISADVANTAGES
+Advantages:
+- Faster than manual methods
+- High accuracy
+- Easily scalable
+Disadvantages:
+- Requires high-quality labeled data
+- May misclassify in poor lighting conditions
+9. CONCLUSION
+The project successfully demonstrates the use of transfer learning in classifying blood cells. It shows potential for practical deployment in healthcare environments for diagnostic support.
+10. FUTURE SCOPE
+- Extend to detect diseases like leukemia
+- Deploy on mobile apps or integrate with digital microscopes
+- Increase dataset diversity and robustness
+11. APPENDIX
+GitHub  Code: https://github.com/ak-bharadwaj/hemato-vision-ai-classify
+
